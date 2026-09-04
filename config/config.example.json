@@ -1,0 +1,92 @@
+{
+  "hooks": {
+    "enabled": true,
+    "events": {
+      "Stop": [
+        {
+          "hooks": [
+            {
+              "type": "process",
+              "command": "powershell",
+              "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "C:\\Users\\fym\\.zcode\\hooks\\notify.ps1",
+                "-Event",
+                "complete"
+              ]
+            }
+          ]
+        }
+      ],
+      "PermissionRequest": [
+        {
+          "hooks": [
+            {
+              "type": "process",
+              "command": "powershell",
+              "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "C:\\Users\\fym\\.zcode\\hooks\\notify.ps1",
+                "-Event",
+                "notification"
+              ]
+            }
+          ]
+        }
+      ],
+      "PostToolUseFailure": [
+        {
+          "hooks": [
+            {
+              "type": "process",
+              "command": "powershell",
+              "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "C:\\Users\\fym\\.zcode\\hooks\\notify.ps1",
+                "-Event",
+                "error"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "mcp": {
+    "servers": {
+      "context7": {
+        "type": "http",
+        "url": "https://mcp.context7.com/mcp"
+      },
+      "paper-search": {
+        "type": "stdio",
+        "command": "C:\\Users\\fym\\.local\\bin\\uv.exe",
+        "args": [
+          "tool",
+          "run",
+          "paper-search-mcp"
+        ],
+        "env": {
+          "PAPER_SEARCH_MCP_GOOGLE_SCHOLAR_PROXY_URL": "http://127.0.0.1:7892"
+        }
+      }
+    }
+  },
+  "plugins": {
+    "enabledPlugins": {
+      "android-emulator@zcode-plugins-official": true,
+      "ios-simulator@zcode-plugins-official": true,
+      "restore-legacy-sessions@zcode-plugins-official": true,
+      "stock-deep-analyzer@uzi-skill": true
+    }
+  }
+}
