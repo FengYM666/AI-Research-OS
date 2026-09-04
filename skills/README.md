@@ -18,6 +18,12 @@ bash scripts/install.sh
 | `paper-writing` / `paper-verification` / `reviewer-defense` / `research-publishing` / `latex-setup` | 同上 | 论文写作一致性、数字对代码审计、预判审稿人、开源发布、LaTeX 环境 |
 | `research-paper-writing` | [Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills)（彭思达方法论） | 顶会各章节写作（Abstract/Intro/Method/Experiments） |
 | `scientific-visualization` | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | 出版级图表，带数据诚信护栏 |
+| `idea-evaluator` | [HKUSTDial/Supervisor-Skills](https://github.com/HKUSTDial/Supervisor-Skills)（CC BY-NC-SA 4.0，仅个人使用） | 博导视角评估 idea：五维打分 + 致命伤审计 |
+| `pre-submission-reviewer` | 同上 | 投稿前五维体检 + AI 腔词汇黑名单 |
+| `figure-designer` | 同上 | 论文三核心图设计（动机图/方法总览图/结果图） |
+| `tech-paper-template` | 同上 | 技术论文逻辑骨架 + 贡献对齐自查 |
+| `paper-polish` | 同上 | 忠于原意的润色 + 中译英投稿级改写 |
+| `vibe-research-workflow` | 同上 | 博导的 AI 协作总规矩：机械活外包，判断归人 |
 
 **斜杠命令**（安装脚本会一并装到 `~/.agents/commands/phd-skills/`）：
 `/phd-skills:gaps`（找研究空白）· `/phd-skills:xray`（论文对代码审计）· `/phd-skills:fortify`（选最强消融）· `/phd-skills:factcheck`（查假引用）

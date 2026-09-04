@@ -28,10 +28,16 @@ git clone -q --depth 1 --filter=blob:none --sparse https://github.com/Master-cai
 (cd "$TMP/rpw" && git sparse-checkout set research-paper-writing)
 cp -r "$TMP/rpw/research-paper-writing" "$SKILLS_DIR/"
 
-echo "==> [4/4] 出版级科研画图（K-Dense-AI/scientific-agent-skills）"
+echo "==> [4/5] 出版级科研画图（K-Dense-AI/scientific-agent-skills）"
 git clone -q --depth 1 --filter=blob:none --sparse https://github.com/K-Dense-AI/scientific-agent-skills "$TMP/kdense"
 (cd "$TMP/kdense" && git sparse-checkout set skills/scientific-visualization)
 cp -r "$TMP/kdense/skills/scientific-visualization" "$SKILLS_DIR/"
+
+echo "==> [5/5] 博导科研技能 6 件套（HKUSTDial/Supervisor-Skills，CC BY-NC-SA 4.0 仅个人使用）"
+git clone -q --depth 1 --filter=blob:none --sparse https://github.com/HKUSTDial/Supervisor-Skills.git "$TMP/supervisor"
+(cd "$TMP/supervisor" && git sparse-checkout set skills/idea-evaluator skills/pre-submission-reviewer skills/figure-designer skills/tech-paper-template skills/vibe-research-workflow skills/paper-polish)
+cp -r "$TMP/supervisor"/skills/* "$SKILLS_DIR/"
+rm -f "$SKILLS_DIR/README.md" "$SKILLS_DIR/README.en.md"  # 清掉稀疏签出带出的说明文件
 
 # 本仓库自研技能
 echo "==> 安装本仓库自研的 paper-search 技能"
