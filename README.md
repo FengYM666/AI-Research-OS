@@ -26,15 +26,13 @@
 
 ## 🔬 科研工作流全景
 
-```mermaid
-graph LR
-    A["定方向<br>/phd-skills:gaps"] --> B["查文献<br>paper-search MCP"]
-    B --> C["复现<br>reproduce"]
-    C --> D["跑实验<br>launch / compare / debug"]
-    D --> E["画图<br>scientific-visualization"]
-    E --> F["写论文<br>research-paper-writing"]
-    F --> G["投稿防守<br>fortify / factcheck"]
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/research-workflow-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="docs/images/research-workflow-light.png">
+  <img alt="科研工作流全景：定方向（gaps）→ 查文献（paper-search MCP）→ 复现（reproduce）→ 跑实验（launch/compare/debug）→ 画图（scientific-visualization）→ 写论文（research-paper-writing）→ 投稿防守（fortify/factcheck）" src="docs/images/research-workflow-light.png">
+</picture>
+
+> 图的生成脚本见 [docs/images/make_workflow_figure.py](docs/images/make_workflow_figure.py)，可复现、可改配色。
 
 ## 🚀 快速开始
 
