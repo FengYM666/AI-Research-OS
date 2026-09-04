@@ -1,4 +1,4 @@
-# zcode-research-setup
+# AI-Research-OS
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Client](https://img.shields.io/badge/client-ZCode%20%7C%20Claude%20Code-green)]()
@@ -23,8 +23,8 @@
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/FengYM666/zcode-research-setup.git
-cd zcode-research-setup
+git clone https://github.com/FengYM666/AI-Research-OS.git
+cd AI-Research-OS
 bash scripts/install.sh   # installs all recommended skills
 ```
 
@@ -43,11 +43,11 @@ Built on: [obra/superpowers](https://github.com/obra/superpowers) · [fcakyon/ph
 
 ## 📮 Contact
 
-Questions, suggestions, or collaboration: **[2658370947@qq.com](mailto:2658370947@qq.com)** · [Issues](https://github.com/FengYM666/zcode-research-setup/issues)
+Questions, suggestions, or collaboration: **[2658370947@qq.com](mailto:2658370947@qq.com)** · [Issues](https://github.com/FengYM666/AI-Research-OS/issues)
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=fengym666/zcode-research-setup&type=Date)](https://star-history.com/#fengym666/zcode-research-setup&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=fengym666/ai-research-os&type=Date)](https://star-history.com/#fengym666/ai-research-os&Date)
 
 ---
 

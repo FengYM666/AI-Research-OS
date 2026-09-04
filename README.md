@@ -1,4 +1,4 @@
-# zcode-research-setup
+# AI-Research-OS
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)]()
@@ -36,8 +36,8 @@
 
 ```bash
 # 1. 克隆本仓库
-git clone https://github.com/FengYM666/zcode-research-setup.git
-cd zcode-research-setup
+git clone https://github.com/FengYM666/AI-Research-OS.git
+cd AI-Research-OS
 
 # 2. 一键安装全部推荐技能（Git Bash / Linux / macOS）
 bash scripts/install.sh
@@ -85,11 +85,11 @@ A: 开发于 ZCode，技能遵循开放 [Agent Skills](https://agentskills.io) �
 
 使用中遇到任何问题、有改进建议或想交流学术工具链，欢迎邮件联系：**[2658370947@qq.com](mailto:2658370947@qq.com)**
 
-也欢迎在 [Issues](https://github.com/FengYM666/zcode-research-setup/issues) 区提问和讨论。
+也欢迎在 [Issues](https://github.com/FengYM666/AI-Research-OS/issues) 区提问和讨论。
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=fengym666/zcode-research-setup&type=Date)](https://star-history.com/#fengym666/zcode-research-setup&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=fengym666/ai-research-os&type=Date)](https://star-history.com/#fengym666/ai-research-os&Date)
 
 ---
 
