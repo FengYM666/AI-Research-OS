@@ -32,8 +32,6 @@
   <img alt="科研工作流全景：定方向（gaps）→ 查文献（paper-search MCP）→ 复现（reproduce）→ 跑实验（launch/compare/debug）→ 画图（scientific-visualization）→ 写论文（research-paper-writing）→ 投稿防守（fortify/factcheck）" src="docs/images/research-workflow-light.png">
 </picture>
 
-> 图的生成脚本见 [docs/images/make_workflow_figure.py](docs/images/make_workflow_figure.py)，可复现、可改配色。
-
 ## 🚀 快速开始
 
 ```bash
@@ -82,6 +80,16 @@ A: 开发于 ZCode，技能遵循开放 [Agent Skills](https://agentskills.io) �
 ## 🙏 致谢
 
 本方案站在这些优秀开源项目的肩膀上：[obra/superpowers](https://github.com/obra/superpowers) · [fcakyon/phd-skills](https://github.com/fcakyon/phd-skills) · [Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills)（致谢[彭思达](https://github.com/pengsida)老师）· [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) · [openags/paper-search-mcp](https://github.com/openags/paper-search-mcp) · [anthropics/skills](https://github.com/anthropics/skills)
+
+## 📮 联系方式
+
+使用中遇到任何问题、有改进建议或想交流学术工具链，欢迎邮件联系：**[2658370947@qq.com](mailto:2658370947@qq.com)**
+
+也欢迎在 [Issues](https://github.com/FengYM666/zcode-research-setup/issues) 区提问和讨论。
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=fengym666/zcode-research-setup&type=Date)](https://star-history.com/#fengym666/zcode-research-setup&Date)
 
 ---
 
