@@ -2,27 +2,38 @@
 <html>
 <head>
 <meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#fff; font-family:"Segoe UI","Microsoft YaHei",sans-serif; }
-  #shot { width:830px; height:480px; background:#FFFFFF; display:flex; flex-direction:column; }
-  .main { flex:1; display:flex; padding:38px 40px 22px; gap:40px; min-height:0; }
-  .left { width:240px; flex-shrink:0; display:flex; flex-direction:column; padding-top:6px; }
-  .eyebrow { font-size:12px; font-weight:600; letter-spacing:3px; color:#4263EB; }
-  .title { font-size:30px; font-weight:700; color:#1A1B25; margin-top:10px; }
-  .rule { width:34px; height:3px; background:#4263EB; border-radius:2px; margin:16px 0 14px; }
-  .desc { font-size:15px; color:#495057; line-height:1.75; }
-  .note { margin-top:auto; font-size:12.5px; color:#868E96; line-height:1.6; }
-  .steps { flex:1; display:flex; flex-direction:column; justify-content:space-between; position:relative; padding:2px 0; }
-  .vline { position:absolute; left:12.5px; top:16px; bottom:16px; width:2px; background:#E9ECEF; border-radius:1px; }
-  .row { display:flex; align-items:center; gap:14px; position:relative; }
-  .num { width:27px; height:27px; border-radius:50%; color:#fff; font-size:13.5px; font-weight:600; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .name { font-size:18px; font-weight:600; color:#212529; width:92px; flex-shrink:0; }
-  .chip { font-family:"Cascadia Code","Consolas",monospace; font-size:13px; color:#364FC7; background:#EDF2FF; border:1px solid #DBE4FF; border-radius:6px; padding:5px 11px; white-space:nowrap; }
-  .base { height:56px; background:#F8F9FA; border-top:1px solid #E9ECEF; display:flex; align-items:center; padding:0 40px; gap:20px; flex-shrink:0; }
-  .btag { font-size:13px; font-weight:600; color:#495057; flex-shrink:0; }
-  .bitem { display:flex; align-items:center; gap:7px; font-size:13px; color:#495057; white-space:nowrap; }
-  .dot { width:7px; height:7px; border-radius:2px; background:#4263EB; flex-shrink:0; }
+  body { background:#fff; }
+  #shot {
+    width:830px; height:480px; display:flex; flex-direction:column;
+    background:#FAF9F6;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(26,24,21,0.02) 0, rgba(26,24,21,0.02) 1px, transparent 1px, transparent 26px),
+      repeating-linear-gradient(90deg, rgba(26,24,21,0.02) 0, rgba(26,24,21,0.02) 1px, transparent 1px, transparent 26px);
+    font-family:"Noto Serif SC",Georgia,serif; color:#1A1815;
+  }
+  .main { flex:1; display:flex; padding:40px 42px 20px; gap:42px; min-height:0; }
+  .left { width:238px; flex-shrink:0; display:flex; flex-direction:column; padding-top:4px; }
+  .eyebrow { font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:600; letter-spacing:3px; color:#A8321E; }
+  .title { font-size:31px; font-weight:900; color:#141210; margin-top:12px; }
+  .rule { width:30px; height:3px; background:#A8321E; margin:16px 0 14px; }
+  .desc { font-size:15px; color:#57534A; line-height:1.85; }
+  .note { margin-top:auto; font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:#A29C8F; line-height:1.7; }
+  .steps { flex:1; display:flex; flex-direction:column; justify-content:space-between; position:relative; padding:4px 0; }
+  .vline { position:absolute; left:19px; top:18px; bottom:18px; width:1px; background:#E0DCD2; }
+  .row { display:flex; align-items:center; gap:16px; position:relative; }
+  .no { font-family:"IBM Plex Mono",monospace; font-size:13px; font-weight:600; color:#A8321E; width:40px; flex-shrink:0; background:#FAF9F6; }
+  .name { font-size:18px; font-weight:700; color:#211E19; width:94px; flex-shrink:0; }
+  .skill { font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:#57534A; border-left:2px solid #A8321E; padding-left:11px; white-space:nowrap; }
+  .base { flex-shrink:0; margin:0 42px; padding:12px 0 18px; border-top:1px solid #D8D3C8; position:relative; }
+  .base::before { content:""; position:absolute; top:-1px; left:0; width:64px; border-top:2px solid #1A1815; }
+  .base .in { display:flex; align-items:baseline; gap:14px; white-space:nowrap; }
+  .btag { font-size:13.5px; font-weight:700; color:#211E19; }
+  .bsep { font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:#A29C8F; }
+  .bitem { font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:#57534A; }
 </style>
 </head>
 <body>
@@ -33,25 +44,31 @@
       <div class="title">科研工作流全景</div>
       <div class="rule"></div>
       <div class="desc">从定方向到投稿防守，每一步都有对应的技能与工具兜底。</div>
-      <div class="note">46 个精选技能 · 按场景自动触发</div>
+      <div class="note">46 skills · auto-triggered<br>figures rebuilt from src/</div>
     </div>
     <div class="steps">
       <div class="vline"></div>
-      <div class="row"><span class="num" style="background:#364FC7">1</span><span class="name">定方向</span><span class="chip">/phd-skills:gaps</span></div>
-      <div class="row"><span class="num" style="background:#2E62C6">2</span><span class="name">查文献</span><span class="chip">paper-search MCP</span></div>
-      <div class="row"><span class="num" style="background:#2675C4">3</span><span class="name">复现</span><span class="chip">reproduce</span></div>
-      <div class="row"><span class="num" style="background:#1D88C0">4</span><span class="name">跑实验</span><span class="chip">launch · compare · debug</span></div>
-      <div class="row"><span class="num" style="background:#1798B2">5</span><span class="name">画图</span><span class="chip">scientific-visualization</span></div>
-      <div class="row"><span class="num" style="background:#12A38B">6</span><span class="name">写论文</span><span class="chip">research-paper-writing</span></div>
-      <div class="row"><span class="num" style="background:#0CA678">7</span><span class="name">投稿防守</span><span class="chip">fortify · factcheck</span></div>
+      <div class="row"><span class="no">[01]</span><span class="name">定方向</span><span class="skill">/phd-skills:gaps</span></div>
+      <div class="row"><span class="no">[02]</span><span class="name">查文献</span><span class="skill">paper-search MCP</span></div>
+      <div class="row"><span class="no">[03]</span><span class="name">复现</span><span class="skill">reproduce</span></div>
+      <div class="row"><span class="no">[04]</span><span class="name">跑实验</span><span class="skill">launch · compare · debug</span></div>
+      <div class="row"><span class="no">[05]</span><span class="name">画图</span><span class="skill">scientific-visualization</span></div>
+      <div class="row"><span class="no">[06]</span><span class="name">写论文</span><span class="skill">research-paper-writing</span></div>
+      <div class="row"><span class="no">[07]</span><span class="name">投稿防守</span><span class="skill">fortify · factcheck</span></div>
     </div>
   </div>
   <div class="base">
-    <span class="btag">支撑层</span>
-    <span class="bitem"><span class="dot"></span>AGENTS.md · 反幻觉纪律</span>
-    <span class="bitem"><span class="dot"></span>paper-search MCP · 20+ 源</span>
-    <span class="bitem"><span class="dot"></span>proxy · 代理自感应</span>
-    <span class="bitem"><span class="dot"></span>notify · 提醒</span>
+    <div class="in">
+      <span class="btag">支撑层</span>
+      <span class="bsep">──</span>
+      <span class="bitem">AGENTS.md 反幻觉纪律</span>
+      <span class="bsep">/</span>
+      <span class="bitem">paper-search MCP · 20+ 源</span>
+      <span class="bsep">/</span>
+      <span class="bitem">proxy 代理自感应</span>
+      <span class="bsep">/</span>
+      <span class="bitem">notify 提醒</span>
+    </div>
   </div>
 </div>
 </body>

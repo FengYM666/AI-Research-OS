@@ -26,7 +26,13 @@ def main() -> None:
                 device_scale_factor=2,
             )
             page.goto((SRC / html).as_uri())
-            page.wait_for_timeout(250)
+            try:
+                page.wait_for_function(
+                    "document.fonts.status === 'loaded'", timeout=10000
+                )
+            except Exception:
+                pass  # offline: fall back to system fonts
+            page.wait_for_timeout(200)
             page.locator("#shot").screenshot(path=str(OUT / png))
             page.close()
             print(f"built {png}")

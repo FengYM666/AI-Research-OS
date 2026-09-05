@@ -2,78 +2,80 @@
 <html>
 <head>
 <meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#fff; font-family:"Segoe UI","Microsoft YaHei",sans-serif; }
-  #shot { width:1280px; height:400px; background:#FFFFFF; position:relative; overflow:hidden; }
-  .deco1 { position:absolute; width:480px; height:480px; border-radius:50%; background:rgba(76,110,245,0.055); right:-130px; top:-170px; }
-  .deco2 { position:absolute; width:320px; height:320px; border-radius:50%; background:rgba(12,166,120,0.06); right:190px; bottom:-150px; }
-  .dots { position:absolute; right:470px; top:54px; display:grid; grid-template-columns:repeat(9,1fr); gap:19px; }
-  .dots i { width:3px; height:3px; border-radius:50%; background:#D6DEEE; }
-  .left { position:absolute; left:72px; top:0; height:100%; display:flex; flex-direction:column; justify-content:center; }
-  .badge { font-size:11.5px; font-weight:600; letter-spacing:2.5px; color:#4263EB; }
-  h1 { font-family:"Cascadia Code","Consolas",monospace; font-size:56px; font-weight:700; color:#14171F; margin-top:16px; letter-spacing:-1px; }
-  .sub-cn { font-size:21px; font-weight:500; color:#495057; margin-top:14px; }
-  .sub-en { font-size:14px; color:#868E96; margin-top:6px; }
-  .chips { display:flex; gap:12px; margin-top:30px; }
-  .chip { display:flex; align-items:center; gap:8px; font-size:14px; color:#343A40; background:#F1F3F5; border-radius:999px; padding:9px 18px; white-space:nowrap; }
-  .chip i { width:8px; height:8px; border-radius:50%; }
-  .card { position:absolute; width:300px; height:172px; background:#fff; border-radius:14px; padding:20px 22px; }
-  .back { right:120px; top:64px; border:1px solid #E9ECEF; transform:rotate(-5deg); }
-  .front { right:64px; top:150px; border:1px solid #DBE4FF; box-shadow:0 12px 32px rgba(28,39,86,0.10); transform:rotate(2.5deg); }
-  .bar { height:11px; border-radius:3px; background:#E9ECEF; margin-bottom:10px; }
-  .front .bar { background:#E3EAF8; }
-  .verdict { display:flex; align-items:center; gap:9px; margin-top:16px; }
-  .icon { width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .icon.no { background:#FFE3E3; }
-  .icon.yes { background:#E6FCF5; }
-  .x { position:relative; width:11px; height:11px; }
-  .x i { position:absolute; left:5px; top:-1px; width:2.5px; height:13px; background:#E03131; border-radius:2px; }
-  .x i:first-child { transform:rotate(45deg); }
-  .x i:last-child { transform:rotate(-45deg); }
-  .ck { width:10px; height:6px; border-left:2.5px solid #0CA678; border-bottom:2.5px solid #0CA678; transform:rotate(-45deg) translate(1px,-2px); }
-  .vt { font-size:13.5px; font-weight:600; }
-  .stamp { position:absolute; right:150px; top:158px; width:56px; height:56px; border-radius:50%; background:#0CA678; border:5px solid #fff; box-shadow:0 8px 20px rgba(12,166,120,0.35); display:flex; align-items:center; justify-content:center; z-index:3; }
-  .stamp .ck { width:16px; height:9px; border-left:3.5px solid #fff; border-bottom:3.5px solid #fff; transform:rotate(-45deg) translate(1px,-3px); }
+  body { background:#fff; }
+  #shot {
+    width:1280px; height:400px; position:relative; overflow:hidden;
+    background:#FAF9F6;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(26,24,21,0.022) 0, rgba(26,24,21,0.022) 1px, transparent 1px, transparent 26px),
+      repeating-linear-gradient(90deg, rgba(26,24,21,0.022) 0, rgba(26,24,21,0.022) 1px, transparent 1px, transparent 26px);
+    font-family:"Noto Serif SC",Georgia,serif;
+    color:#1A1815;
+  }
+  .left { position:absolute; left:76px; top:0; height:100%; display:flex; flex-direction:column; justify-content:center; }
+  .badge { font-family:"IBM Plex Mono",monospace; font-size:11.5px; font-weight:500; letter-spacing:3px; color:#A8321E; display:flex; align-items:center; gap:10px; }
+  .badge::before { content:""; width:9px; height:9px; background:#A8321E; }
+  h1 { font-size:58px; font-weight:900; letter-spacing:-1px; margin-top:20px; color:#141210; }
+  .sub-cn { font-size:21px; font-weight:600; color:#3D3A33; margin-top:16px; }
+  .sub-en { font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:#8A857A; margin-top:8px; letter-spacing:0.5px; }
+  .rule { width:44px; height:3px; background:#A8321E; margin:22px 0 18px; }
+  .feats { display:flex; align-items:center; }
+  .feat { font-size:14.5px; font-weight:600; color:#3D3A33; display:flex; align-items:center; gap:8px; }
+  .feat b { font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:13px; color:#2D5A3D; }
+  .fsep { width:1px; height:16px; background:#D8D3C8; margin:0 18px; }
+  .refs {
+    position:absolute; right:96px; top:58px; width:312px; height:196px;
+    background:#FFFFFF; border:1px solid #E3DFD5;
+    transform:rotate(-1.6deg); padding:20px 22px;
+    box-shadow:0 1px 0 rgba(26,24,21,0.04);
+  }
+  .rhead { font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:2.5px; color:#8A857A; padding-bottom:9px; border-bottom:1px solid #E3DFD5; display:flex; justify-content:space-between; }
+  .ritem { display:flex; align-items:baseline; gap:8px; margin-top:12px; font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:#3D3A33; white-space:nowrap; }
+  .ritem .no { color:#A29C8F; }
+  .ritem .ok { margin-left:auto; color:#2D5A3D; font-size:12px; }
+  .rbad { margin-top:12px; }
+  .rbad .line { font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:#A8321E; text-decoration:line-through; text-decoration-thickness:1px; white-space:nowrap; }
+  .rbad .mark { font-size:12.5px; color:#A8321E; margin-top:4px; font-style:italic; font-weight:600; padding-left:26px; }
+  .stamp { position:absolute; right:34px; top:226px; width:118px; height:118px; transform:rotate(-11deg); mix-blend-mode:multiply; opacity:0.92; z-index:3; }
 </style>
 </head>
 <body>
 <div id="shot">
-  <div class="deco1"></div>
-  <div class="deco2"></div>
-  <div class="dots">
-    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-  </div>
   <div class="left">
     <div class="badge">AGENT CONFIG PACK · FOR ACADEMIC RESEARCH</div>
     <h1>AI-Research-OS</h1>
     <div class="sub-cn">把 AI 编程助手调教成靠谱的学术科研搭子</div>
     <div class="sub-en">Turn your AI coding agent into an academic research copilot</div>
-    <div class="chips">
-      <span class="chip"><i style="background:#4263EB"></i>反幻觉 · 引用五要素核实</span>
-      <span class="chip"><i style="background:#0CA678"></i>顶会论文全流程技能</span>
-      <span class="chip"><i style="background:#7048E8"></i>一键安装 · 46 个精选技能</span>
+    <div class="rule"></div>
+    <div class="feats">
+      <span class="feat"><b>[✓]</b>反幻觉 · 引用五要素核实</span>
+      <span class="fsep"></span>
+      <span class="feat"><b>[✓]</b>顶会论文全流程技能</span>
+      <span class="fsep"></span>
+      <span class="feat"><b>[✓]</b>一键安装 · 46 个精选技能</span>
     </div>
   </div>
-  <div class="card back">
-    <div class="bar" style="width:62%"></div>
-    <div class="bar" style="width:92%"></div>
-    <div class="bar" style="width:78%"></div>
-    <div class="bar" style="width:50%; margin-bottom:0"></div>
-    <div class="verdict"><span class="icon no"><span class="x"><i></i><i></i></span></span><span class="vt" style="color:#E03131">查无此文</span></div>
+  <div class="refs">
+    <div class="rhead"><span>REFERENCES</span><span>SPOT CHECK</span></div>
+    <div class="ritem"><span class="no">[1]</span>Vaswani et al., 2017 · NeurIPS<span class="ok">[✓]</span></div>
+    <div class="ritem"><span class="no">[2]</span>Brown et al., 2020 · NeurIPS<span class="ok">[✓]</span></div>
+    <div class="rbad">
+      <div class="line">[3] Fabulous Results, 2023 · Nature</div>
+      <div class="mark">—— 查无此文</div>
+    </div>
   </div>
-  <div class="card front">
-    <div class="bar" style="width:58%"></div>
-    <div class="bar" style="width:90%"></div>
-    <div class="bar" style="width:74%"></div>
-    <div class="bar" style="width:46%; margin-bottom:0"></div>
-    <div class="verdict"><span class="icon yes"><span class="ck"></span></span><span class="vt" style="color:#0CA678">已核实 · dblp + OpenAlex</span></div>
-  </div>
-  <div class="stamp"><span class="ck"></span></div>
+  <svg class="stamp" viewBox="0 0 120 120">
+    <defs><path id="cir" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs>
+    <circle cx="60" cy="60" r="57" fill="none" stroke="#A8321E" stroke-width="2.5"/>
+    <circle cx="60" cy="60" r="33" fill="none" stroke="#A8321E" stroke-width="1"/>
+    <text font-family="IBM Plex Mono,monospace" font-size="9" letter-spacing="1.5" fill="#A8321E"><textPath href="#cir">FIVE-FACTOR CHECK · CITATION VERIFIED ·</textPath></text>
+    <text x="60" y="57" text-anchor="middle" font-family="'Noto Serif SC',serif" font-weight="900" font-size="17" fill="#A8321E">已核实</text>
+    <text x="60" y="76" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" letter-spacing="2" fill="#A8321E">5 / 5</text>
+  </svg>
 </div>
 </body>
 </html>
