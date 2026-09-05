@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/banner.png" alt="AI-Research-OS — Turn your AI coding agent into an academic research copilot">
+</p>
+
 # AI-Research-OS
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)

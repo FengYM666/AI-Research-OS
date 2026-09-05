@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/banner.png" alt="AI-Research-OS — 把 AI 编程助手调教成靠谱的学术科研搭子：反幻觉核实 · 顶会论文全流程 · 一键安装">
+</p>
+
 # AI-Research-OS
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)

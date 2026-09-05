@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#fff; font-family:"Segoe UI","Microsoft YaHei",sans-serif; }
+  #shot { width:830px; height:480px; background:#FFFFFF; display:flex; flex-direction:column; }
+  .main { flex:1; display:flex; padding:38px 40px 22px; gap:40px; min-height:0; }
+  .left { width:240px; flex-shrink:0; display:flex; flex-direction:column; padding-top:6px; }
+  .eyebrow { font-size:12px; font-weight:600; letter-spacing:3px; color:#4263EB; }
+  .title { font-size:30px; font-weight:700; color:#1A1B25; margin-top:10px; }
+  .rule { width:34px; height:3px; background:#4263EB; border-radius:2px; margin:16px 0 14px; }
+  .desc { font-size:15px; color:#495057; line-height:1.75; }
+  .note { margin-top:auto; font-size:12.5px; color:#868E96; line-height:1.6; }
+  .steps { flex:1; display:flex; flex-direction:column; justify-content:space-between; position:relative; padding:2px 0; }
+  .vline { position:absolute; left:12.5px; top:16px; bottom:16px; width:2px; background:#E9ECEF; border-radius:1px; }
+  .row { display:flex; align-items:center; gap:14px; position:relative; }
+  .num { width:27px; height:27px; border-radius:50%; color:#fff; font-size:13.5px; font-weight:600; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .name { font-size:18px; font-weight:600; color:#212529; width:92px; flex-shrink:0; }
+  .chip { font-family:"Cascadia Code","Consolas",monospace; font-size:13px; color:#364FC7; background:#EDF2FF; border:1px solid #DBE4FF; border-radius:6px; padding:5px 11px; white-space:nowrap; }
+  .base { height:56px; background:#F8F9FA; border-top:1px solid #E9ECEF; display:flex; align-items:center; padding:0 40px; gap:20px; flex-shrink:0; }
+  .btag { font-size:13px; font-weight:600; color:#495057; flex-shrink:0; }
+  .bitem { display:flex; align-items:center; gap:7px; font-size:13px; color:#495057; white-space:nowrap; }
+  .dot { width:7px; height:7px; border-radius:2px; background:#4263EB; flex-shrink:0; }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="main">
+    <div class="left">
+      <div class="eyebrow">RESEARCH WORKFLOW</div>
+      <div class="title">科研工作流全景</div>
+      <div class="rule"></div>
+      <div class="desc">从定方向到投稿防守，每一步都有对应的技能与工具兜底。</div>
+      <div class="note">46 个精选技能 · 按场景自动触发</div>
+    </div>
+    <div class="steps">
+      <div class="vline"></div>
+      <div class="row"><span class="num" style="background:#364FC7">1</span><span class="name">定方向</span><span class="chip">/phd-skills:gaps</span></div>
+      <div class="row"><span class="num" style="background:#2E62C6">2</span><span class="name">查文献</span><span class="chip">paper-search MCP</span></div>
+      <div class="row"><span class="num" style="background:#2675C4">3</span><span class="name">复现</span><span class="chip">reproduce</span></div>
+      <div class="row"><span class="num" style="background:#1D88C0">4</span><span class="name">跑实验</span><span class="chip">launch · compare · debug</span></div>
+      <div class="row"><span class="num" style="background:#1798B2">5</span><span class="name">画图</span><span class="chip">scientific-visualization</span></div>
+      <div class="row"><span class="num" style="background:#12A38B">6</span><span class="name">写论文</span><span class="chip">research-paper-writing</span></div>
+      <div class="row"><span class="num" style="background:#0CA678">7</span><span class="name">投稿防守</span><span class="chip">fortify · factcheck</span></div>
+    </div>
+  </div>
+  <div class="base">
+    <span class="btag">支撑层</span>
+    <span class="bitem"><span class="dot"></span>AGENTS.md · 反幻觉纪律</span>
+    <span class="bitem"><span class="dot"></span>paper-search MCP · 20+ 源</span>
+    <span class="bitem"><span class="dot"></span>proxy · 代理自感应</span>
+    <span class="bitem"><span class="dot"></span>notify · 提醒</span>
+  </div>
+</div>
+</body>
+</html>
