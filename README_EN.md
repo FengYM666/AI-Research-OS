@@ -43,7 +43,7 @@ Built on: [obra/superpowers](https://github.com/obra/superpowers) · [fcakyon/ph
 
 ## 📮 Contact
 
-Questions, suggestions, or collaboration: **[2658370947@qq.com](mailto:2658370947@qq.com)** · [Issues](https://github.com/FengYM666/AI-Research-OS/issues)
+Questions, suggestions, or feedback: please open a thread in [Issues](https://github.com/FengYM666/AI-Research-OS/issues).
 
 ## ⭐ Star History
 

@@ -83,9 +83,7 @@ A: 开发于 ZCode，技能遵循开放 [Agent Skills](https://agentskills.io) �
 
 ## 📮 联系方式
 
-使用中遇到任何问题、有改进建议或想交流学术工具链，欢迎邮件联系：**[2658370947@qq.com](mailto:2658370947@qq.com)**
-
-也欢迎在 [Issues](https://github.com/FengYM666/AI-Research-OS/issues) 区提问和讨论。
+使用中遇到任何问题、有改进建议或想交流学术工具链，欢迎在 [Issues](https://github.com/FengYM666/AI-Research-OS/issues) 区提问和讨论。
 
 ## ⭐ Star History
 
