@@ -27,6 +27,7 @@
 | 😤 训练跑 50 小时发现配置错了 | `launch` 起飞前检查单 + `compare` 同 epoch 对齐对比 |
 | 😤 投稿被审稿人秒杀 | `reviewer-defense` 预判审稿问题 + `/phd-skills:factcheck` 逐条查假引用 |
 | 😤 开关代理后终端就断网 | `proxy-auto-detect.sh`：自动感应系统代理开关，终端永远在线 |
+| 😤 需求说得糙，AI 就干偏 | `prompt-optimizer` MCP：糙话先转专业提示词，**你过目确认后** agent 才动手 |
 
 ## 🔬 科研工作流全景
 
@@ -60,14 +61,14 @@ bash scripts/install.sh
 | `skills/` | 自研 `paper-search` 技能 + 精选第三方技能清单（附一键安装脚本） |
 | `scripts/proxy-auto-detect.sh` | 终端代理自动感应（每次开 shell 读系统代理状态，开关梯子都不掉线） |
 | `scripts/notify.ps1` | 任务完成/出错的声音提醒 hook（Windows） |
-| `config/config.example.json` | MCP 服务器配置样例（paper-search + Context7），已脱敏 |
+| `config/config.example.json` | MCP 服务器配置样例（paper-search + Context7 + prompt-optimizer），已脱敏 |
 | `docs/技能操作指南.md` | 新手友好的中文使用手册：每个环节"你就这么说" |
 
 ## 🧠 设计哲学
 
 1. **流程 > 知识**：只装教 agent "怎么干活"的技能；知识类技能模型本来就会，装了是噪音
 2. **证据 > 声称**：任何"完成/修好/发表"的声称必须附可验证的证据
-3. **少即是多**：46 个精选技能 > 163 个全家桶，上下文越干净 agent 越聪明
+3. **少即是多**：52 个精选技能 > 163 个全家桶，上下文越干净 agent 越聪明
 4. **机制 > 自觉**：能写成 hook/脚本的规则，不靠模型自觉
 
 ## ❓ 常见问题

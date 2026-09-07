@@ -23,6 +23,7 @@
 | 50-hour training run wasted | `launch` pre-flight checklist + `compare` same-epoch run alignment |
 | Desk-reject by reviewers | `reviewer-defense` + `/phd-skills:factcheck` (DBLP-verified citations) |
 | Proxy toggling breaks terminal | `proxy-auto-detect.sh` senses the system proxy state on every new shell |
+| Vague requests derail the agent | `prompt-optimizer` MCP rewrites rough asks into precise prompts — you approve before it acts |
 
 ## 🚀 Quick Start
 
@@ -38,7 +39,7 @@ Then restart your agent client and try: *"Find CVPR/ICCV papers from the last 3 
 
 1. **Process over knowledge** — install skills that teach *how to work*, not facts the model already knows
 2. **Evidence over claims** — no "done" without verifiable output
-3. **Less is more** — 46 curated skills beat a 163-skill bundle
+3. **Less is more** — 52 curated skills beat a 163-skill bundle
 4. **Mechanism over discipline** — hooks and scripts enforce what good intentions can't
 
 ## 🙏 Acknowledgements

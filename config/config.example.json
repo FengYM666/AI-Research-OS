@@ -78,6 +78,10 @@
         "env": {
           "PAPER_SEARCH_MCP_GOOGLE_SCHOLAR_PROXY_URL": "http://127.0.0.1:7892"
         }
+      },
+      "prompt-optimizer": {
+        "type": "http",
+        "url": "http://localhost:3000/mcp"
       }
     }
   },
@@ -85,8 +89,7 @@
     "enabledPlugins": {
       "android-emulator@zcode-plugins-official": true,
       "ios-simulator@zcode-plugins-official": true,
-      "restore-legacy-sessions@zcode-plugins-official": true,
-      "stock-deep-analyzer@uzi-skill": true
+      "restore-legacy-sessions@zcode-plugins-official": true
     }
   }
 }
