@@ -81,7 +81,21 @@
       },
       "prompt-optimizer": {
         "type": "http",
-        "url": "http://localhost:3000/mcp"
+        "url": "http://localhost:3000/mcp",
+        "timeoutMs": 90000
+      },
+      "zotero": {
+        "type": "stdio",
+        "command": "uv",
+        "args": [
+          "tool",
+          "run",
+          "zotero-mcp"
+        ],
+        "env": {
+          "ZOTERO_LOCAL": "true"
+        },
+        "_comment": "Zotero 桌面端需开着；本地 API 在设置中开启"
       }
     }
   },

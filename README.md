@@ -28,6 +28,9 @@
 | 😤 投稿被审稿人秒杀 | `reviewer-defense` 预判审稿问题 + `/phd-skills:factcheck` 逐条查假引用 |
 | 😤 开关代理后终端就断网 | `proxy-auto-detect.sh`：自动感应系统代理开关，终端永远在线 |
 | 😤 需求说得糙，AI 就干偏 | `prompt-optimizer` MCP：糙话先转专业提示词，**你过目确认后** agent 才动手 |
+| 😤 文献库还得手动整理 | `zotero` MCP：agent 直接查/存/引用你的 Zotero 文献库 |
+| 😤 英文论文啃得慢 | `pdf2zh_next`：PDF 一键中英对照翻译，公式排版原样保留 |
+| 😤 关机忘关梯子，开机断网 | `proxyguard.ps1`：开机自检，死代理残留自动纠正，0.15 秒跑完零常驻 |
 
 ## 🔬 科研工作流全景
 
@@ -60,8 +63,9 @@ bash scripts/install.sh
 | `AGENTS.md` | **行为纪律**：执行前确认、计划拷问、改完代码强制验证（放用户目录全局生效） |
 | `skills/` | 自研 `paper-search` 技能 + 精选第三方技能清单（附一键安装脚本） |
 | `scripts/proxy-auto-detect.sh` | 终端代理自动感应（每次开 shell 读系统代理状态，开关梯子都不掉线） |
+| `scripts/proxyguard.ps1` | 开机代理自检：防止"关机忘关梯子"残留导致的开机断网（Windows） |
 | `scripts/notify.ps1` | 任务完成/出错的声音提醒 hook（Windows） |
-| `config/config.example.json` | MCP 服务器配置样例（paper-search + Context7 + prompt-optimizer），已脱敏 |
+| `config/config.example.json` | MCP 服务器配置样例（paper-search + Context7 + prompt-optimizer + zotero），已脱敏 |
 | `docs/技能操作指南.md` | 新手友好的中文使用手册：每个环节"你就这么说" |
 
 ## 🧠 设计哲学

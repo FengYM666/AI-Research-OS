@@ -24,6 +24,9 @@
 | Desk-reject by reviewers | `reviewer-defense` + `/phd-skills:factcheck` (DBLP-verified citations) |
 | Proxy toggling breaks terminal | `proxy-auto-detect.sh` senses the system proxy state on every new shell |
 | Vague requests derail the agent | `prompt-optimizer` MCP rewrites rough asks into precise prompts — you approve before it acts |
+| Zotero library managed by hand | `zotero` MCP: the agent searches/stores/cites your Zotero library directly |
+| English papers are slow to read | `pdf2zh_next`: one-command bilingual PDF translation, formulas and layout preserved |
+| Forgetting to close the proxy breaks the next boot | `proxyguard.ps1`: logon self-check auto-clears stale dead-proxy state (Windows, ~0.15s, zero resident cost) |
 
 ## 🚀 Quick Start
 
