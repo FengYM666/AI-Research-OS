@@ -38,6 +38,14 @@
 4. 查边界：空输入 / null / 边界值 / 溢出
 5. 改了文件名、路径、符号名 → grep 所有旧名引用（文档内部交叉引用最容易漏）
 
+# ARIS 深度科研工具链（v4，按需主动用）
+
+装了 ARIS 集成的机器上，遇到**查文献写论文、实验设计、方案/代码要第二意见、rebuttal** 类任务时主动提出用这套（用户不记命令）：
+
+- **独立审稿桥**：`mcp__codex__codex`（新线程）/ `mcp__codex__codex-reply`（续聊）——全新会话的 GLM 对抗式评审，比自审强在无叙事污染、立场对立。任何任务想要第二意见都能用，不必只在科研场景
+- **ARIS 技能库**：clone 在本机（路径见用户级 AGENTS.md 或问用户），83 个 skill **没装成斜杠命令**——用时直接 Read `skills/<名字>/SKILL.md` 照做；skill 间 `/name` 引用换算成读对应目录；索引看其 `AGENT_GUIDE.md`
+- **自动科研工作区**（若配了）：方向池 `DIRECTIONS.md` + 进度账本 `PROGRESS.md`，会话先读账本再决定续跑/开新题；夜间定时任务模板见 `templates/aris-nightly-cron-template.md`
+
 # 找文件默认用 Everything
 
 在用户电脑上找文件/软件/目录，默认用 Everything（NTFS 全盘索引，秒出结果），不要用 find 从根目录扫。安装位置可能被用户挪动，**禁止写死绝对路径**，每次现查再用：

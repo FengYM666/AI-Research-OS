@@ -29,6 +29,8 @@
 | 😤 开关代理后终端就断网 | `proxy-auto-detect.sh`：自动感应系统代理开关，终端永远在线 |
 | 😤 需求说得糙，AI 就干偏 | `prompt-optimizer` MCP：糙话先转专业提示词，**你过目确认后** agent 才动手 |
 | 😤 文献库还得手动整理 | `zotero` MCP：agent 直接查/存/引用你的 Zotero 文献库 |
+| 😤 自己写的方案/代码没人挑刺，盲区全靠撞 | **ARIS 独立审稿桥（v4）** `aris-zhipu`：拉一个全新会话的 GLM 对你的代码/论文/方案对抗式评审，支持同线程追问 |
+| 😤 深度科研全流程（选题→实验→论文→rebuttal）要自己串工具 | **ARIS 技能库对接（v4）**：83 个 skill 即读即用，方向池写一行即可夜间无人值守自动跑（断点续跑 + 卡死检测） |
 | 😤 英文论文啃得慢 | `pdf2zh_next`：PDF 一键中英对照翻译，公式排版原样保留 |
 | 😤 关机忘关梯子，开机断网 | `proxyguard.ps1`：开机自检，死代理残留自动纠正，0.15 秒跑完零常驻 |
 
@@ -65,8 +67,11 @@ bash scripts/install.sh
 | `scripts/proxy-auto-detect.sh` | 终端代理自动感应（每次开 shell 读系统代理状态，开关梯子都不掉线） |
 | `scripts/proxyguard.ps1` | 开机代理自检：防止"关机忘关梯子"残留导致的开机断网（Windows） |
 | `scripts/notify.ps1` | 任务完成/出错的声音提醒 hook（Windows） |
-| `config/config.example.json` | MCP 服务器配置样例（paper-search + Context7 + prompt-optimizer + zotero），已脱敏 |
+| `config/config.example.json` | MCP 服务器配置样例（paper-search + Context7 + prompt-optimizer + zotero + codex 审稿桥），已脱敏 |
 | `docs/技能操作指南.md` | 新手友好的中文使用手册：每个环节"你就这么说" |
+| `mcp-servers/aris-zhipu/server.py` | **独立审稿桥（v4）**：零依赖 Python MCP 服务器，对 agent 暴露 ARIS 期望的 `codex`/`codex-reply` 工具契约，底层走智谱 GLM（Anthropic 兼容端点，Coding Plan key 直接用） |
+| `templates/aris-lab/` | **自动科研工作区模板（v4）**：方向池 + 进度账本 + 说明，复制即用 |
+| `templates/aris-nightly-cron-template.md` | **夜间无人值守定时任务的 prompt 模板（v4）**：ZCode CronCreate 直接粘贴 |
 
 ## 🧠 设计哲学
 
@@ -88,7 +93,7 @@ A: 开发于 ZCode，技能遵循开放 [Agent Skills](https://agentskills.io) �
 
 ## 🙏 致谢
 
-本方案站在这些优秀开源项目的肩膀上：[obra/superpowers](https://github.com/obra/superpowers) · [fcakyon/phd-skills](https://github.com/fcakyon/phd-skills) · [Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills)（致谢[彭思达](https://github.com/pengsida)老师）· [HKUSTDial/Supervisor-Skills](https://github.com/HKUSTDial/Supervisor-Skills) · [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) · [openags/paper-search-mcp](https://github.com/openags/paper-search-mcp) · [anthropics/skills](https://github.com/anthropics/skills)
+本方案站在这些优秀开源项目的肩膀上：[obra/superpowers](https://github.com/obra/superpowers) · [fcakyon/phd-skills](https://github.com/fcakyon/phd-skills) · [Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills)（致谢[彭思达](https://github.com/pengsida)老师）· [HKUSTDial/Supervisor-Skills](https://github.com/HKUSTDial/Supervisor-Skills) · [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) · [openags/paper-search-mcp](https://github.com/openags/paper-search-mcp) · [anthropics/skills](https://github.com/anthropics/skills) · [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)（ARIS，v4 审稿桥与技能库对接的上游）
 
 ## 📮 联系方式
 

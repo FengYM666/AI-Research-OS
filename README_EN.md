@@ -25,6 +25,8 @@
 | Proxy toggling breaks terminal | `proxy-auto-detect.sh` senses the system proxy state on every new shell |
 | Vague requests derail the agent | `prompt-optimizer` MCP rewrites rough asks into precise prompts — you approve before it acts |
 | Zotero library managed by hand | `zotero` MCP: the agent searches/stores/cites your Zotero library directly |
+| No one adversarially reviews your plan/code | **ARIS reviewer bridge (v4)** `aris-zhipu`: spawns a fresh GLM session to adversarially review your code/paper/proposal, with follow-up replies on the same thread |
+| Full research pipeline (idea → experiments → paper → rebuttal) is DIY tool-glue | **ARIS skills integration (v4)**: 83 skills read-on-demand; write one line in the direction pool and an unattended nightly session runs it (resumable, stall-detection) |
 | English papers are slow to read | `pdf2zh_next`: one-command bilingual PDF translation, formulas and layout preserved |
 | Forgetting to close the proxy breaks the next boot | `proxyguard.ps1`: logon self-check auto-clears stale dead-proxy state (Windows, ~0.15s, zero resident cost) |
 
@@ -47,7 +49,7 @@ Then restart your agent client and try: *"Find CVPR/ICCV papers from the last 3 
 
 ## 🙏 Acknowledgements
 
-Built on: [obra/superpowers](https://github.com/obra/superpowers) · [fcakyon/phd-skills](https://github.com/fcakyon/phd-skills) · [Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills) · [HKUSTDial/Supervisor-Skills](https://github.com/HKUSTDial/Supervisor-Skills) · [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) · [openags/paper-search-mcp](https://github.com/openags/paper-search-mcp) · [anthropics/skills](https://github.com/anthropics/skills)
+Built on: [obra/superpowers](https://github.com/obra/superpowers) · [fcakyon/phd-skills](https://github.com/fcakyon/phd-skills) · [Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills) · [HKUSTDial/Supervisor-Skills](https://github.com/HKUSTDial/Supervisor-Skills) · [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) · [openags/paper-search-mcp](https://github.com/openags/paper-search-mcp) · [anthropics/skills](https://github.com/anthropics/skills) · [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) (ARIS — upstream of the v4 reviewer bridge & skills integration)
 
 ## 📮 Contact
 

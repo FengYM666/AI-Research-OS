@@ -96,6 +96,19 @@
           "ZOTERO_LOCAL": "true"
         },
         "_comment": "Zotero 桌面端需开着；本地 API 在设置中开启"
+      },
+      "codex": {
+        "type": "stdio",
+        "command": "python",
+        "args": [
+          "C:/Users/<你>/.zcode/mcp-servers/aris-zhipu/server.py"
+        ],
+        "env": {
+          "ZHIPU_API_KEY": "<你的智谱APIKey，open.bigmodel.cn 控制台创建>",
+          "ZHIPU_MODEL": "glm-5.3"
+        },
+        "timeoutMs": 1800000,
+        "_comment": "ARIS 独立审稿桥（v4）：对 agent 暴露 codex/codex-reply 工具契约，底层走智谱 GLM。源码见 mcp-servers/aris-zhipu/。timeoutMs 30min 供深审；轻量档可改 glm-5.3-flash"
       }
     }
   },
