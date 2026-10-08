@@ -41,6 +41,13 @@ bash scripts/install.sh
 |--------|------|------|
 | [paper-search-mcp](https://github.com/openags/paper-search-mcp) | `config/config.example.json` | 20 个学术源检索/下载/读全文 |
 | [Context7](https://context7.com) | 同上（免费免 key） | 查库的最新官方文档，治 API 幻觉 |
+| [prompt-optimizer](https://github.com/linshenkx/prompt-optimizer) | 同上 | 糙需求先转专业提示词，你确认后 agent 才动手 |
+| [zotero-mcp](https://github.com/54yyyu/zotero-mcp) | 同上 | agent 直接查/存/引用你的 Zotero 文献库 |
+| [headroom](https://pypi.org/project/headroom-ai/) | 同上 | 大体积工具输出自动压缩进上下文，原文落盘可取回 |
+
+## 进阶：全家桶技能库（按需自取）
+
+想在某环节深挖（选题 / 文献 / 实验 / 论文 / rebuttal / 对抗审稿），可以逛逛 [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)（83+ 个科研技能）。同样建议**按需挑几个装**，别整库全装——道理同上，上下文越干净 agent 越聪明。
 
 ## 不装什么（同样重要）
 

@@ -28,7 +28,8 @@
 | No one adversarially reviews your plan/code | **ARIS reviewer bridge (v4)** `aris-zhipu`: spawns a fresh GLM session to adversarially review your code/paper/proposal, with follow-up replies on the same thread |
 | Full research pipeline (idea → experiments → paper → rebuttal) is DIY tool-glue | **ARIS skills integration (v4)**: 83 skills read-on-demand; write one line in the direction pool and an unattended nightly session runs it (resumable, stall-detection) |
 | English papers are slow to read | `pdf2zh_next`: one-command bilingual PDF translation, formulas and layout preserved |
-| Forgetting to close the proxy breaks the next boot | `proxyguard.ps1`: logon self-check auto-clears stale dead-proxy state (Windows, ~0.15s, zero resident cost) |
+| Bloated context burns tokens | `headroom` MCP: auto-compresses oversized tool output into context (~89% saved in practice), original stored on disk for retrieval |
+| Forgetting to close the proxy breaks the next boot | `proxyguard.ps1`: logon self-check auto-clears stale dead-proxy state (Windows, milliseconds, zero resident cost) |
 
 ## 🚀 Quick Start
 
@@ -44,7 +45,7 @@ Then restart your agent client and try: *"Find CVPR/ICCV papers from the last 3 
 
 1. **Process over knowledge** — install skills that teach *how to work*, not facts the model already knows
 2. **Evidence over claims** — no "done" without verifiable output
-3. **Less is more** — 52 curated skills beat a 163-skill bundle
+3. **Less is more** — 23 curated skills beat a 163-skill bundle
 4. **Mechanism over discipline** — hooks and scripts enforce what good intentions can't
 
 ## 🙏 Acknowledgements

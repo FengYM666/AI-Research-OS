@@ -38,7 +38,7 @@ MCP 不可用时（比如服务器没连上），退回到下面手动 curl 的�
 | Papers with Code | 论文 + 官方代码 + SOTA 榜单 | paperswithcode.com |
 | 领域官方库 | ACL Anthology（NLP）、proceedings.neurips.cc、proceedings.mlr.press（ICML）、OpenReview（ICLR） | 各自官网 |
 
-**需要梯子（终端先 `export https_proxy=http://127.0.0.1:7892`，端口以当时注册表为准）：**
+**需要梯子（终端先 `export https_proxy=http://127.0.0.1:7890`，端口以你的代理软件为准）：**
 
 | 来源 | 用途 | 注意 |
 |---|---|---|

@@ -1,8 +1,8 @@
 # ProxyGuard: 开机自检系统代理（防止"上次关机没关代理软件"导致开机断网）
 # 逻辑：系统代理开关开着但代理端口不通 => 判定为残留状态 => 自动关闭系统代理
 # 端口活着(梯子自启了)或本来就关着 => 什么都不做。只在登录瞬间跑约 0.15 秒，零常驻。
-# 可选参数 -Port：你代理软件的实际端口（常见 Clash/V2ray 7890，Clash Verge 7897，本用户自由猫 7892）
-param([int]$Port = 7892)
+# 可选参数 -Port：你代理软件的实际端口（常见 Clash/V2ray 7890，Clash Verge 7897，部分软件 7892）
+param([int]$Port = 7890)
 
 $log = "$env:USERPROFILE\.zcode\proxyguard.log"
 $reg = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings"

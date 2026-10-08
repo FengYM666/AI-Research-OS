@@ -5,6 +5,13 @@
 - 复杂任务 / 3+ 文件改动 / 需求含糊 → 先出方案或先问（plan mode / AskUserQuestion），用户批准再动手
 - 禁止猜方向盲干。方向不明确必须停下来问，不默认选一个方向闷头跑
 
+## 智能增强原则
+
+- 简单任务：一次命令直接干，不要分析瘫痪
+- 复杂任务：先搜证据再动手；相关代码不在当前目录就先定位，禁止凭记忆猜路径
+- 文档 / 库 API 问题：优先用 Context7 查最新文档，别靠训练记忆
+- 长会话防漂移：改完代码必须用具体输入走一遍；涉及 3+ 文件的重构，改动前先 grep 所有调用方
+
 ## 计划拷问（Plan Grill）
 
 写完计划、提交给用户之前，先自我拷问设计漏洞：
@@ -38,6 +45,15 @@
 4. 查边界：空输入 / null / 边界值 / 溢出
 5. 改了文件名、路径、符号名 → grep 所有旧名引用（文档内部交叉引用最容易漏）
 
+验证深度按改动大小选最小必要验证：1 行 typo 不用跑全量测试，重构 / 跨文件改动跑相关测试。
+
+## 工作流原则
+
+1. 复杂任务先写计划（plan），简单任务直接干
+2. 最小方案阶梯：需要吗？已有吗？标准库？原生？一行？——最小实现（YAGNI）
+3. 质量底线：类型 / 错误处理 / 安全 / 测试
+4. 非平凡逻辑留 1 个可运行的检查
+
 # ARIS 深度科研工具链（v4，按需主动用）
 
 装了 ARIS 集成的机器上，遇到**查文献写论文、实验设计、方案/代码要第二意见、rebuttal** 类任务时主动提出用这套（用户不记命令）：
@@ -61,15 +77,3 @@
 2. 搜索：`"$dir/es.exe" -n 20 "关键词"`。常用参数：`-n` 限条数、`-path "目录"` 按路径过滤、`-extension ext` 按扩展名过滤
 3. 报 "Everything IPC not found" → Everything 没在运行，用同目录主程序后台拉起：`"$dir/Everything.exe" -startup`，等几秒再重试
 4. es 完全不可用的退路：GUI `"$dir/Everything.exe" -search "关键词"` + 截图读结果，或对已知小目录定向 ls/find
-
-# Skill 中文注释
-
-每次调用 Skill 工具后，回复末尾附一行 `— 中文说明`，讲这个 skill 是干什么用的。内置命令（/help、/clear 等）不用，非 skill 的正常对话不用。
-
-# Global Memory
-
-以下 memory 适用于所有项目。引用方式：`~/.zcode/memory/<文件名>`
-
-- [Caveman 中文偏好](~/.zcode/memory/caveman-chinese-preference.md) — Caveman 模式用中文不是英文
-- [三 Skill 协同](~/.zcode/memory/three-skill-synergy.md) — ECC + ponytail + PWF 三层工作流，省 token 保质量
-- [Skill 中文注释](~/.zcode/memory/skill-chinese-annotation.md) — 每次 skill 调用自动跟中文说明

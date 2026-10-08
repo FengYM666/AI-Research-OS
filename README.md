@@ -32,7 +32,8 @@
 | 😤 自己写的方案/代码没人挑刺，盲区全靠撞 | **ARIS 独立审稿桥（v4）** `aris-zhipu`：拉一个全新会话的 GLM 对你的代码/论文/方案对抗式评审，支持同线程追问 |
 | 😤 深度科研全流程（选题→实验→论文→rebuttal）要自己串工具 | **ARIS 技能库对接（v4）**：83 个 skill 即读即用，方向池写一行即可夜间无人值守自动跑（断点续跑 + 卡死检测） |
 | 😤 英文论文啃得慢 | `pdf2zh_next`：PDF 一键中英对照翻译，公式排版原样保留 |
-| 😤 关机忘关梯子，开机断网 | `proxyguard.ps1`：开机自检，死代理残留自动纠正，0.15 秒跑完零常驻 |
+| 😤 长会话大输出烧 token | `headroom` MCP：大体积工具输出自动压缩进上下文（实测省 ~89%），原文落盘随时取回 |
+| 😤 关机忘关梯子，开机断网 | `proxyguard.ps1`：开机自检，死代理残留自动纠正，毫秒级跑完零常驻 |
 
 ## 🔬 科研工作流全景
 
@@ -66,8 +67,8 @@ bash scripts/install.sh
 | `skills/` | 自研 `paper-search` 技能 + 精选第三方技能清单（附一键安装脚本） |
 | `scripts/proxy-auto-detect.sh` | 终端代理自动感应（每次开 shell 读系统代理状态，开关梯子都不掉线） |
 | `scripts/proxyguard.ps1` | 开机代理自检：防止"关机忘关梯子"残留导致的开机断网（Windows） |
-| `scripts/notify.ps1` | 任务完成/出错的声音提醒 hook（Windows） |
-| `config/config.example.json` | MCP 服务器配置样例（paper-search + Context7 + prompt-optimizer + zotero + codex 审稿桥），已脱敏 |
+| `scripts/notify.ps1` | 任务完成/出错的声音提醒 hook（Windows，供 Claude Code 等支持配置型 hook 的客户端；ZCode 3.11.2+ 已内置任务通知+声音，无需此脚本） |
+| `config/config.example.json` | MCP 服务器配置样例（paper-search + Context7 + prompt-optimizer + zotero + headroom + codex 审稿桥），已脱敏 |
 | `docs/技能操作指南.md` | 新手友好的中文使用手册：每个环节"你就这么说" |
 | `mcp-servers/aris-zhipu/server.py` | **独立审稿桥（v4）**：零依赖 Python MCP 服务器，对 agent 暴露 ARIS 期望的 `codex`/`codex-reply` 工具契约，底层走智谱 GLM（Anthropic 兼容端点，Coding Plan key 直接用） |
 | `templates/aris-lab/` | **自动科研工作区模板（v4）**：方向池 + 进度账本 + 说明，复制即用 |
@@ -77,7 +78,7 @@ bash scripts/install.sh
 
 1. **流程 > 知识**：只装教 agent "怎么干活"的技能；知识类技能模型本来就会，装了是噪音
 2. **证据 > 声称**：任何"完成/修好/发表"的声称必须附可验证的证据
-3. **少即是多**：52 个精选技能 > 163 个全家桶，上下文越干净 agent 越聪明
+3. **少即是多**：23 个精选技能 > 163 个全家桶，上下文越干净 agent 越聪明
 4. **机制 > 自觉**：能写成 hook/脚本的规则，不靠模型自觉
 
 ## ❓ 常见问题

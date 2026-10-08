@@ -1,4 +1,6 @@
 {
+  "_comment1": "复制到你的 agent 客户端配置后，把 <你的用户名> 换成实际 Windows 用户名，127.0.0.1:7890 换成你代理软件的实际端口",
+  "_comment2": "声音提醒：ZCode 3.11.2+ 已内置任务通知+声音（在客户端设置里开启即可，配置型 hook 当前版本不执行）；hooks 块供 Claude Code 等支持配置型 hook 的客户端参考",
   "hooks": {
     "enabled": true,
     "events": {
@@ -13,7 +15,7 @@
                 "-ExecutionPolicy",
                 "Bypass",
                 "-File",
-                "C:\\Users\\fym\\.zcode\\hooks\\notify.ps1",
+                "C:\\Users\\<你的用户名>\\.zcode\\hooks\\notify.ps1",
                 "-Event",
                 "complete"
               ]
@@ -32,7 +34,7 @@
                 "-ExecutionPolicy",
                 "Bypass",
                 "-File",
-                "C:\\Users\\fym\\.zcode\\hooks\\notify.ps1",
+                "C:\\Users\\<你的用户名>\\.zcode\\hooks\\notify.ps1",
                 "-Event",
                 "notification"
               ]
@@ -51,7 +53,7 @@
                 "-ExecutionPolicy",
                 "Bypass",
                 "-File",
-                "C:\\Users\\fym\\.zcode\\hooks\\notify.ps1",
+                "C:\\Users\\<你的用户名>\\.zcode\\hooks\\notify.ps1",
                 "-Event",
                 "error"
               ]
@@ -69,15 +71,16 @@
       },
       "paper-search": {
         "type": "stdio",
-        "command": "C:\\Users\\fym\\.local\\bin\\uv.exe",
+        "command": "uv",
         "args": [
           "tool",
           "run",
           "paper-search-mcp"
         ],
         "env": {
-          "PAPER_SEARCH_MCP_GOOGLE_SCHOLAR_PROXY_URL": "http://127.0.0.1:7892"
-        }
+          "PAPER_SEARCH_MCP_GOOGLE_SCHOLAR_PROXY_URL": "http://127.0.0.1:7890"
+        },
+        "_comment": "代理端口按需修改；无代理环境删掉 env 块"
       },
       "prompt-optimizer": {
         "type": "http",
@@ -109,14 +112,16 @@
         },
         "timeoutMs": 1800000,
         "_comment": "ARIS 独立审稿桥（v4）：对 agent 暴露 codex/codex-reply 工具契约，底层走智谱 GLM。源码见 mcp-servers/aris-zhipu/。timeoutMs 30min 供深审；轻量档可改 glm-5.3-flash"
+      },
+      "headroom": {
+        "type": "stdio",
+        "command": "headroom",
+        "args": [
+          "mcp",
+          "serve"
+        ],
+        "_comment": "uv tool install headroom-ai 安装；自动压缩大体积工具输出省上下文，原文落盘可取回"
       }
-    }
-  },
-  "plugins": {
-    "enabledPlugins": {
-      "android-emulator@zcode-plugins-official": true,
-      "ios-simulator@zcode-plugins-official": true,
-      "restore-legacy-sessions@zcode-plugins-official": true
     }
   }
 }
