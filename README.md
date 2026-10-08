@@ -9,6 +9,8 @@
 [![Client](https://img.shields.io/badge/client-ZCode%20%7C%20Claude%20Code-green)]()
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
+> **English**: A ready-to-use agent configuration that turns Claude Code / ZCode / Cursor into a disciplined academic research copilot — anti-hallucination literature search, top-conference paper workflows, evidence-required completion. **[→ English README](README_EN.md)**
+
 > 把 AI 编程助手调教成靠谱的**学术科研搭子**：不编论文、不乱改代码、查文献走权威源、写论文懂顶会套路。
 >
 > 一套开箱即用的 Agent 配置方案：行为纪律 + 技能组合 + MCP 服务器 + 网络自动化，覆盖"定方向 → 查文献 → 复现实验 → 画图 → 写论文 → 投稿防守"全链条。
@@ -18,6 +20,11 @@
 ---
 
 ## ✨ 为什么值得用
+
+<p align="center">
+  <img src="docs/images/demo-anti-hallucination.gif" width="720" alt="反幻觉演示：AI 想引用记忆里的论文被拦截，只采信本轮真实检索命中（OpenAlex 实查数据重放）">
+</p>
+<p align="center"><sub>真实检索重放（OpenAlex 实查数据）——记忆里的候选论文不在本轮结果中，拦截不采信</sub></p>
 
 | 痛点 | 本方案 |
 |------|--------|

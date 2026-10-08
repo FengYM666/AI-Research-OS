@@ -15,6 +15,11 @@
 
 ## ✨ Highlights
 
+<p align="center">
+  <img src="docs/images/demo-anti-hallucination.gif" width="720" alt="Anti-hallucination demo: a memory-recalled citation is blocked; only papers hit by the live search are cited (real OpenAlex query replay)">
+</p>
+<p align="center"><sub>Real query replay (OpenAlex) — a paper the model "remembered" is blocked because it wasn't in this round's search results</sub></p>
+
 | Pain point | This setup |
 |------------|-----------|
 | AI fabricates paper citations | 5-element verification for every citation (title/authors/year/venue/link from one real record) |
